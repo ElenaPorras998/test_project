@@ -26,5 +26,7 @@ Route::get('/movie/list', 'movieController@listing');
 Route::get('/author/{id}', 'authorController@edit')->name('author edit');
 Route::post('/author/{id}', 'authorController@add');
 
-Route::get('/movie/{id}', 'movieController@edit')->name('movie edit');
-Route::post('/movie/{id}', 'movieController@add');
+Route::get('/movie/{id}/edit', 'movieController@edit')->name('movie edit');
+Route::post('/movie/{id}/edit', 'movieController@add');
+
+Route::get('/movie/{id}', 'movieController@detail');

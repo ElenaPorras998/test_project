@@ -81,4 +81,19 @@ class movieController extends Controller
         
         return $view;
     }
+
+    public function detail($id=null)
+    {
+        $view = view('movies/detail');
+        
+        $movie = Movie::where('id', $id)->get();
+        $view->movie = $movie[0];
+
+        $author_id = $movie[0]->author_id;
+
+        $author = Author::where('id', $author_id)->get();
+        $view->author = $author[0];        
+        
+        return $view;
+    }
 }
