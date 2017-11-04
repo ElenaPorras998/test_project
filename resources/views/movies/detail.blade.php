@@ -1,5 +1,9 @@
 @extends('wrapper')
 
+@section ('title')
+Movie | Detail
+@endsection
+
 @section('content')
 <h1>{{$movie->title}}</h1>
 <a href="{{route('movie edit', ['id' => $movie->id])}}"><button>Edit</button></a>

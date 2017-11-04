@@ -1,5 +1,9 @@
 @extends('wrapper')
 
+@section ('title')
+Author
+@endsection
+
 @section('content')
 <form action="" method="post">
     {{ csrf_field() }}

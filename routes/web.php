@@ -14,10 +14,10 @@
 Route::get('/', 'indexController@home');
 
 Route::get('/author', 'authorController@view');
-Route::post('/author', 'authorController@add');
+Route::post('/author', 'authorController@add')->name('add author');
 
 Route::get('/movie', 'movieController@view');
-Route::post('/movie', 'movieController@add');
+Route::post('/movie', 'movieController@add')->name('add movie');
 
 Route::get('/author/list', 'authorController@listing');
 

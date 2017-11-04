@@ -1,5 +1,9 @@
 @extends('wrapper')
 
+@section ('title')
+Movie
+@endsection
+
 @section('content')
 <form action="" method="post">
     {{ csrf_field() }}
