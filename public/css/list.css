@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+section#main{
+    background-image: url('/img/back.jpg');
+    background-size: 100% auto;
+    background-attachment: fixed;
+    background-position: center center;
+    height: 100em;
+    color: #3d5c56;
+    font-family: 'Sumana', serif;
+}
+
+.content{
+    background-color:#fffffe;
+    width:70%;
+    margin: auto;
+    padding-bottom: 10em;
+}
+
+h1{
+    text-align: center;
+    font-size: 5em;
+    color: #3d5c56;
+}
+
+ul#list {
+    padding-left: 10em;
+    padding-top: 3em;
+}
+
+#form {
+    padding: 2em;
+}
+
+button#edit{
+    width: 50%; 
+    margin-left:15em;
+    margin-top: 1em;
+    background-color:#3d5c56;
+    color: white; 
+}

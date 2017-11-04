@@ -1,5 +1,9 @@
 @extends('wrapper')
 
+@section('style')
+<link rel="stylesheet" href="/css/list.css">
+@endsection
+
 @section ('title')
 Author | List
 @endsection
@@ -9,19 +13,19 @@ active
 @endsection
 
 @section('content')
-<h1>List of authors</h1>
+<section id="main">
+    <div class="content">
+        <h1>List of authors</h1>
 
-<input type="text" id="search">
-<button id="btn">Search!</button>
-
-<ul>
-    @foreach($authors as $author)
-        <li>
-            <a href="{{route('author edit', ['id' => $author->id])}}">
-                {{$author->name}} ({{$author->year_of_birth}})
-            </a>
-        </li>
-    @endforeach
-</ul>
-
+        <ul id="list">
+            @foreach($authors as $author)
+                <li>
+                    <a href="{{route('author edit', ['id' => $author->id])}}">
+                        {{$author->name}} ({{$author->year_of_birth}})
+                    </a>
+                </li>
+            @endforeach
+        </ul>
+    </div>
+</section>
 @endsection

@@ -53,7 +53,7 @@ class movieController extends Controller
         $movie->save();
 
         //redirect to another page
-        return redirect()->action('movieController@view');
+        return redirect()->action('movieController@listing');
     }
 
     public function edit($id=null)

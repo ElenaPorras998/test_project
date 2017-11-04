@@ -16,17 +16,17 @@ Route::get('/', 'indexController@home');
 Route::get('/author', 'authorController@view');
 Route::post('/author', 'authorController@add')->name('add author');
 
-Route::get('/movie', 'movieController@view');
-Route::post('/movie', 'movieController@add')->name('add movie');
+Route::get('/book', 'movieController@view');
+Route::post('/book', 'movieController@add')->name('add movie');
 
 Route::get('/author/list', 'authorController@listing');
 
-Route::get('/movie/list', 'movieController@listing');
+Route::get('/book/list', 'movieController@listing');
 
 Route::get('/author/{id}', 'authorController@edit')->name('author edit');
 Route::post('/author/{id}', 'authorController@add');
 
-Route::get('/movie/{id}/edit', 'movieController@edit')->name('movie edit');
-Route::post('/movie/{id}/edit', 'movieController@add');
+Route::get('/book/{id}/edit', 'movieController@edit')->name('movie edit');
+Route::post('/book/{id}/edit', 'movieController@add');
 
-Route::get('/movie/{id}', 'movieController@detail');
+Route::get('/book/{id}', 'movieController@detail')->name('movie detail');
